@@ -4,7 +4,9 @@
 //
 //  Created by admin on 2017/2/23.
 //  Copyright © 2017年 admin. All rights reserved.
-//
+//根据以下文章学习
+//http://www.cocoachina.com/ios/20140812/9363.html
+// http://www.cocoachina.com/ios/20140925/9756.html
 
 #import "AppDelegate.h"
 

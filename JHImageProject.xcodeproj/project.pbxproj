@@ -15,6 +15,11 @@
 		8433DDC41E5ED47600B95185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDC21E5ED47600B95185 /* LaunchScreen.storyboard */; };
 		8433DDCF1E5ED47600B95185 /* JHImageProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDCE1E5ED47600B95185 /* JHImageProjectTests.m */; };
 		8433DDDA1E5ED47600B95185 /* JHImageProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDD91E5ED47600B95185 /* JHImageProjectUITests.m */; };
+		8433DDEA1E5ED56900B95185 /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDE81E5ED56900B95185 /* ghost.png */; };
+		8433DDEB1E5ED56900B95185 /* ghost1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDE91E5ED56900B95185 /* ghost1.png */; };
+		8433DDF61E5ED5C900B95185 /* BitmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDF41E5ED5C900B95185 /* BitmapViewController.m */; };
+		8433DDF71E5ED5C900B95185 /* BitmapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */; };
+		8433DDFA1E5ED6A300B95185 /* UIImage+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDF91E5ED6A300B95185 /* UIImage+Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		8433DDD51E5ED47600B95185 /* JHImageProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHImageProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433DDD91E5ED47600B95185 /* JHImageProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHImageProjectUITests.m; sourceTree = "<group>"; };
 		8433DDDB1E5ED47600B95185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8433DDE81E5ED56900B95185 /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
+		8433DDE91E5ED56900B95185 /* ghost1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost1.png; sourceTree = "<group>"; };
+		8433DDF31E5ED5C900B95185 /* BitmapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapViewController.h; sourceTree = "<group>"; };
+		8433DDF41E5ED5C900B95185 /* BitmapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapViewController.m; sourceTree = "<group>"; };
+		8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitmapViewController.xib; sourceTree = "<group>"; };
+		8433DDF81E5ED6A300B95185 /* UIImage+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Event.h"; sourceTree = "<group>"; };
+		8433DDF91E5ED6A300B95185 /* UIImage+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Event.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,9 @@
 		8433DDB31E5ED47600B95185 /* JHImageProject */ = {
 			isa = PBXGroup;
 			children = (
+				8433DDF21E5ED5C900B95185 /* ViewControllers */,
+				8433DDF11E5ED5C400B95185 /* Category */,
+				8433DDE71E5ED56900B95185 /* Images */,
 				8433DDB71E5ED47600B95185 /* AppDelegate.h */,
 				8433DDB81E5ED47600B95185 /* AppDelegate.m */,
 				8433DDBA1E5ED47600B95185 /* ViewController.h */,
@@ -138,6 +153,34 @@
 				8433DDDB1E5ED47600B95185 /* Info.plist */,
 			);
 			path = JHImageProjectUITests;
+			sourceTree = "<group>";
+		};
+		8433DDE71E5ED56900B95185 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8433DDE81E5ED56900B95185 /* ghost.png */,
+				8433DDE91E5ED56900B95185 /* ghost1.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8433DDF11E5ED5C400B95185 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8433DDF81E5ED6A300B95185 /* UIImage+Event.h */,
+				8433DDF91E5ED6A300B95185 /* UIImage+Event.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8433DDF21E5ED5C900B95185 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8433DDF31E5ED5C900B95185 /* BitmapViewController.h */,
+				8433DDF41E5ED5C900B95185 /* BitmapViewController.m */,
+				8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433DDC41E5ED47600B95185 /* LaunchScreen.storyboard in Resources */,
+				8433DDEA1E5ED56900B95185 /* ghost.png in Resources */,
 				8433DDC11E5ED47600B95185 /* Assets.xcassets in Resources */,
+				8433DDF71E5ED5C900B95185 /* BitmapViewController.xib in Resources */,
+				8433DDEB1E5ED56900B95185 /* ghost1.png in Resources */,
 				8433DDBF1E5ED47600B95185 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433DDBC1E5ED47600B95185 /* ViewController.m in Sources */,
+				8433DDFA1E5ED6A300B95185 /* UIImage+Event.m in Sources */,
+				8433DDF61E5ED5C900B95185 /* BitmapViewController.m in Sources */,
 				8433DDB91E5ED47600B95185 /* AppDelegate.m in Sources */,
 				8433DDB61E5ED47600B95185 /* main.m in Sources */,
 			);
