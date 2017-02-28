@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84110BC11E6567D0005628EC /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 84110BC01E6567D0005628EC /* heart.png */; };
+		84110BC51E65743F005628EC /* JHLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110BC41E65743F005628EC /* JHLoadingView.m */; };
+		84110BC81E657BF7005628EC /* Quartz2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110BC71E657BF7005628EC /* Quartz2DView.m */; };
 		8433DDB61E5ED47600B95185 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDB51E5ED47600B95185 /* main.m */; };
 		8433DDB91E5ED47600B95185 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDB81E5ED47600B95185 /* AppDelegate.m */; };
 		8433DDBC1E5ED47600B95185 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDBB1E5ED47600B95185 /* ViewController.m */; };
@@ -20,6 +23,8 @@
 		8433DDF61E5ED5C900B95185 /* BitmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDF41E5ED5C900B95185 /* BitmapViewController.m */; };
 		8433DDF71E5ED5C900B95185 /* BitmapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */; };
 		8433DDFA1E5ED6A300B95185 /* UIImage+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDF91E5ED6A300B95185 /* UIImage+Event.m */; };
+		8433DDFE1E655DB100B95185 /* Quartz2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDFC1E655DB100B95185 /* Quartz2DViewController.m */; };
+		8433DDFF1E655DB100B95185 /* Quartz2DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8433DDFD1E655DB100B95185 /* Quartz2DViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84110BC01E6567D0005628EC /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		84110BC31E65743F005628EC /* JHLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHLoadingView.h; sourceTree = "<group>"; };
+		84110BC41E65743F005628EC /* JHLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLoadingView.m; sourceTree = "<group>"; };
+		84110BC61E657BF7005628EC /* Quartz2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quartz2DView.h; sourceTree = "<group>"; };
+		84110BC71E657BF7005628EC /* Quartz2DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quartz2DView.m; sourceTree = "<group>"; };
 		8433DDB11E5ED47600B95185 /* JHImageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHImageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433DDB51E5ED47600B95185 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8433DDB71E5ED47600B95185 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +73,10 @@
 		8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitmapViewController.xib; sourceTree = "<group>"; };
 		8433DDF81E5ED6A300B95185 /* UIImage+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Event.h"; sourceTree = "<group>"; };
 		8433DDF91E5ED6A300B95185 /* UIImage+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Event.m"; sourceTree = "<group>"; };
+		8433DDFB1E655DB100B95185 /* Quartz2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quartz2DViewController.h; sourceTree = "<group>"; };
+		8433DDFC1E655DB100B95185 /* Quartz2DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quartz2DViewController.m; sourceTree = "<group>"; };
+		8433DDFD1E655DB100B95185 /* Quartz2DViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Quartz2DViewController.xib; sourceTree = "<group>"; };
+		8433DE001E65622800B95185 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84110BC21E6573F6005628EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84110BC31E65743F005628EC /* JHLoadingView.h */,
+				84110BC41E65743F005628EC /* JHLoadingView.m */,
+				84110BC61E657BF7005628EC /* Quartz2DView.h */,
+				84110BC71E657BF7005628EC /* Quartz2DView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8433DDA81E5ED47600B95185 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +149,7 @@
 				8433DDC01E5ED47600B95185 /* Assets.xcassets */,
 				8433DDC21E5ED47600B95185 /* LaunchScreen.storyboard */,
 				8433DDC51E5ED47600B95185 /* Info.plist */,
+				8433DE001E65622800B95185 /* PrefixHeader.pch */,
 				8433DDB41E5ED47600B95185 /* Supporting Files */,
 			);
 			path = JHImageProject;
@@ -158,6 +184,7 @@
 		8433DDE71E5ED56900B95185 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84110BC01E6567D0005628EC /* heart.png */,
 				8433DDE81E5ED56900B95185 /* ghost.png */,
 				8433DDE91E5ED56900B95185 /* ghost1.png */,
 			);
@@ -176,9 +203,13 @@
 		8433DDF21E5ED5C900B95185 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84110BC21E6573F6005628EC /* Views */,
 				8433DDF31E5ED5C900B95185 /* BitmapViewController.h */,
 				8433DDF41E5ED5C900B95185 /* BitmapViewController.m */,
 				8433DDF51E5ED5C900B95185 /* BitmapViewController.xib */,
+				8433DDFB1E655DB100B95185 /* Quartz2DViewController.h */,
+				8433DDFC1E655DB100B95185 /* Quartz2DViewController.m */,
+				8433DDFD1E655DB100B95185 /* Quartz2DViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -292,12 +323,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84110BC11E6567D0005628EC /* heart.png in Resources */,
 				8433DDC41E5ED47600B95185 /* LaunchScreen.storyboard in Resources */,
 				8433DDEA1E5ED56900B95185 /* ghost.png in Resources */,
 				8433DDC11E5ED47600B95185 /* Assets.xcassets in Resources */,
 				8433DDF71E5ED5C900B95185 /* BitmapViewController.xib in Resources */,
 				8433DDEB1E5ED56900B95185 /* ghost1.png in Resources */,
 				8433DDBF1E5ED47600B95185 /* Main.storyboard in Resources */,
+				8433DDFF1E655DB100B95185 /* Quartz2DViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433DDBC1E5ED47600B95185 /* ViewController.m in Sources */,
+				84110BC81E657BF7005628EC /* Quartz2DView.m in Sources */,
+				8433DDFE1E655DB100B95185 /* Quartz2DViewController.m in Sources */,
 				8433DDFA1E5ED6A300B95185 /* UIImage+Event.m in Sources */,
 				8433DDF61E5ED5C900B95185 /* BitmapViewController.m in Sources */,
+				84110BC51E65743F005628EC /* JHLoadingView.m in Sources */,
 				8433DDB91E5ED47600B95185 /* AppDelegate.m in Sources */,
 				8433DDB61E5ED47600B95185 /* main.m in Sources */,
 			);
@@ -476,6 +512,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QDC3KV7D2U;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = JHImageProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.antrice.JHImageProject;
@@ -488,6 +526,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QDC3KV7D2U;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = JHImageProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.antrice.JHImageProject;
@@ -564,6 +604,7 @@
 				8433DDE01E5ED47600B95185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8433DDE11E5ED47600B95185 /* Build configuration list for PBXNativeTarget "JHImageProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +613,7 @@
 				8433DDE31E5ED47600B95185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8433DDE41E5ED47600B95185 /* Build configuration list for PBXNativeTarget "JHImageProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +622,7 @@
 				8433DDE61E5ED47600B95185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

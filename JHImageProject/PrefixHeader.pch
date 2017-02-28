@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  JHImageProject
+//
+//  Created by admin on 2017/2/28.
+//  Copyright © 2017年 admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIImage+Event.h"
+
+
+
+//屏幕宽
+#define mWidth [[UIScreen mainScreen] bounds].size.width
+
+//屏幕高
+#define mHeight [[UIScreen mainScreen] bounds].size.height
+
+#endif /* PrefixHeader_pch */

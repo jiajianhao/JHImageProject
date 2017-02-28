@@ -20,12 +20,12 @@
     NSUInteger height = CGImageGetHeight(inputCGImage);
     
     // 2.由于你使用的是32位RGB颜色空间模式，你需要定义一些参数bytesPerPixel（每像素大小）和bitsPerComponent（每个颜色通道大小），然后计算图像bytesPerRow（每行有大）。最后，使用一个数组来存储像素的值。
-    NSUInteger bytesPerPixel = 4;
+    NSUInteger bytesPerPixel = 4;//一个像素4个字节
     NSUInteger bytesPerRow = bytesPerPixel * width;
-    NSUInteger bitsPerComponent = 8;
+    NSUInteger bitsPerComponent = 8;//8位二进制表示256个亮度值
     
     UInt32 * pixels;
-    pixels = (UInt32 *) calloc(height * width,     sizeof(UInt32));
+    pixels = (UInt32 *) calloc(height * width,     sizeof(UInt32));//在内存的动态存储区中分配n个长度为size的连续空间，函数返回一个指向分配起始地址的指针；如果分配不成功，返回NULL。
     
     // 3.创建一个RGB模式的颜色空间CGColorSpace和一个容器CGBitmapContext,将像素指针参数传递到容器中缓存进行存储。
     CGColorSpaceRef colorSpace =     CGColorSpaceCreateDeviceRGB();
@@ -37,7 +37,10 @@
     // 5. 清除colorSpace和context.
     CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
-    
+ 
+    //FTT
+    //
+    //map
     NSLog(@"Brightness of image:");
     // 定义一个指向第一个像素的指针，并使用2个for循环来遍历像素。其实也可以使用一个for循环从0遍历到width*height，但是这样写更容易理解图形是二维的。
     UInt32 * currentPixel = pixels;
