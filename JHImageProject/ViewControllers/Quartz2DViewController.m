@@ -13,6 +13,7 @@
 #import "Quartz2DViewController.h"
 #import "Quartz2DView.h"
 @interface Quartz2DViewController ()<CALayerDelegate>
+@property(nonatomic,strong)CAShapeLayer *shapeLayer;
 
 @end
 
@@ -27,7 +28,30 @@
     // Do any additional setup after loading the view from its nib.
    
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self mineView];
+//    [self mineView];
+    
+//    Quartz2DView *qqqq = [[Quartz2DView alloc]initWithFrame:CGRectMake(0, 0, mWidth, mWidth)];
+//    [self.view addSubview:qqqq];
+    
+    //////////////////////////////
+    //创建出CAShapeLayer
+    self.shapeLayer = [CAShapeLayer layer];
+    self.shapeLayer.frame = CGRectMake(0, 150, 200, 200);//设置shapeLayer的尺寸和位置
+    self.shapeLayer.position = self.view.center;
+    self.shapeLayer.fillColor = [UIColor clearColor].CGColor;//填充颜色为ClearColor
+    
+    //设置线条的宽度和颜色
+    self.shapeLayer.lineWidth = 1.0f;
+    self.shapeLayer.strokeColor = [UIColor redColor].CGColor;
+    
+    //创建出圆形贝塞尔曲线
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 200, 200)];
+    
+    //让贝塞尔曲线与CAShapeLayer产生联系
+    self.shapeLayer.path = circlePath.CGPath;
+    
+    //添加并显示
+    [self.view.layer addSublayer:self.shapeLayer];
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -53,7 +77,6 @@
 }
 -(void)mineView{
     
-    
     //1.创建自定义的layer
           CALayer *layer=[CALayer layer];
           //2.设置layer的属性
@@ -71,42 +94,7 @@
           [layer setNeedsDisplay];
           //3.添加layer
           [self.view.layer addSublayer:layer];
-    
-    
-//    CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    
-//    // 2.绘图(绘制直线), 保存绘图信息
-//    // 设置起点
-//    CGContextMoveToPoint(ctx, 10, 100);
-//    // 设置终点
-//    CGContextAddLineToPoint(ctx, 100, 100);
-//    
-//    // 设置绘图状态
-//    // 设置线条颜色 红色
-//    CGContextSetRGBStrokeColor(ctx, 1.0, 0, 0, 1.0);
-//    // 设置线条宽度
-//    CGContextSetLineWidth(ctx, 10);
-//    // 设置线条的起点和终点的样式
-//    CGContextSetLineCap(ctx, kCGLineCapRound);
-//    // 设置线条的转角的样式
-//    CGContextSetLineJoin(ctx, kCGLineJoinRound);
-//    // 绘制一条空心的线
-//    CGContextStrokePath(ctx);
-//    
-//    /*------------------华丽的分割线---------------------*/
-//    
-//    // 重新设置第二条线的起点
-//    CGContextMoveToPoint(ctx, 150, 200);
-//    // 设置第二条直线的终点(自动把上一条直线的终点当做起点)
-//    CGContextAddLineToPoint(ctx, 100, 50);
-//    // 设置第二条线的颜色 绿色
-//    //    [[UIColor greenColor] set];
-//    CGContextSetRGBStrokeColor(ctx, 0, 1.0, 0, 1.0);
-//    
-//    // 绘制图形(渲染图形到view上)
-//    // 绘制一条空心的线
-//    CGContextStrokePath(ctx);
-}
+  }
 -(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
           //1.绘制图形
           //画一个圆

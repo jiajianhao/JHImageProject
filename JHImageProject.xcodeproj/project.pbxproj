@@ -10,6 +10,8 @@
 		84110BC11E6567D0005628EC /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 84110BC01E6567D0005628EC /* heart.png */; };
 		84110BC51E65743F005628EC /* JHLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110BC41E65743F005628EC /* JHLoadingView.m */; };
 		84110BC81E657BF7005628EC /* Quartz2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110BC71E657BF7005628EC /* Quartz2DView.m */; };
+		84110BCB1E665581005628EC /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84110BCA1E665581005628EC /* CircleView.m */; };
+		8418CAC51E66AD330082F911 /* JHCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418CAC41E66AD330082F911 /* JHCircleProgressView.m */; };
 		8433DDB61E5ED47600B95185 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDB51E5ED47600B95185 /* main.m */; };
 		8433DDB91E5ED47600B95185 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDB81E5ED47600B95185 /* AppDelegate.m */; };
 		8433DDBC1E5ED47600B95185 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433DDBB1E5ED47600B95185 /* ViewController.m */; };
@@ -50,6 +52,10 @@
 		84110BC41E65743F005628EC /* JHLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLoadingView.m; sourceTree = "<group>"; };
 		84110BC61E657BF7005628EC /* Quartz2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quartz2DView.h; sourceTree = "<group>"; };
 		84110BC71E657BF7005628EC /* Quartz2DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quartz2DView.m; sourceTree = "<group>"; };
+		84110BC91E665581005628EC /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		84110BCA1E665581005628EC /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		8418CAC31E66AD330082F911 /* JHCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCircleProgressView.h; sourceTree = "<group>"; };
+		8418CAC41E66AD330082F911 /* JHCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCircleProgressView.m; sourceTree = "<group>"; };
 		8433DDB11E5ED47600B95185 /* JHImageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHImageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8433DDB51E5ED47600B95185 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8433DDB71E5ED47600B95185 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 				84110BC41E65743F005628EC /* JHLoadingView.m */,
 				84110BC61E657BF7005628EC /* Quartz2DView.h */,
 				84110BC71E657BF7005628EC /* Quartz2DView.m */,
+				84110BC91E665581005628EC /* CircleView.h */,
+				84110BCA1E665581005628EC /* CircleView.m */,
+				8418CAC31E66AD330082F911 /* JHCircleProgressView.h */,
+				8418CAC41E66AD330082F911 /* JHCircleProgressView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,7 +367,9 @@
 			files = (
 				8433DDBC1E5ED47600B95185 /* ViewController.m in Sources */,
 				84110BC81E657BF7005628EC /* Quartz2DView.m in Sources */,
+				84110BCB1E665581005628EC /* CircleView.m in Sources */,
 				8433DDFE1E655DB100B95185 /* Quartz2DViewController.m in Sources */,
+				8418CAC51E66AD330082F911 /* JHCircleProgressView.m in Sources */,
 				8433DDFA1E5ED6A300B95185 /* UIImage+Event.m in Sources */,
 				8433DDF61E5ED5C900B95185 /* BitmapViewController.m in Sources */,
 				84110BC51E65743F005628EC /* JHLoadingView.m in Sources */,

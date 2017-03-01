@@ -7,8 +7,10 @@
 //
 
 #import "BitmapViewController.h"
-
+#import "CircleView.h"
+#import "JHCircleProgressView.h"
 @interface BitmapViewController ()
+@property(nonatomic,strong)JHCircleProgressView *circleProgressView;
 
 @end
 
@@ -20,7 +22,24 @@
     //////////////////////////////
     [self readBurryImageAndLogPixels];
     //////////////////////////////
+//    self.circleProgressView = [[JHCircleProgressView alloc]initWithFrame:CGRectMake((mWidth-100)/2, 0, 100, 100)];
+//    self.circleProgressView.backgroundColor=[UIColor whiteColor];
+//    self.circleProgressView.progress = 0.0;
+//    [self.view addSubview: self.circleProgressView];
+    //////////////////////////////
+    CircleView *circle =[[CircleView alloc]initWithFrame:CGRectMake((mWidth-100)/2, 0, 100, 100)];
+    circle.backgroundColor=[UIColor whiteColor];
+    [self.view addSubview:circle];
+    //////////////////////////////
 
+   
+
+}
+
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.circleProgressView.progress = 1;
 }
 -(void)readBurryImageAndLogPixels{
     ///读取图片像素，以一张小图片为例（相对模糊）

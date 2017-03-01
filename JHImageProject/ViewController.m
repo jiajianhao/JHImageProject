@@ -28,6 +28,7 @@
     [super viewDidLoad];
     self.title=@"Image";
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.translucent=NO;
     
     myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, mWidth, mHeight) style:UITableViewStyleGrouped];
     myTableView.delegate=self;
