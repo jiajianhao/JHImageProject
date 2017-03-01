@@ -34,6 +34,11 @@
 //    [self.view addSubview:qqqq];
     
     //////////////////////////////
+    [self showShapeLayer];
+    
+}
+-(void)showShapeLayer{
+    //动画渲染直接提交GPU，不像view的drawRect使用CPU，极大地提升性能
     //创建出CAShapeLayer
     self.shapeLayer = [CAShapeLayer layer];
     self.shapeLayer.frame = CGRectMake(0, 150, 200, 200);//设置shapeLayer的尺寸和位置
@@ -52,6 +57,7 @@
     
     //添加并显示
     [self.view.layer addSublayer:self.shapeLayer];
+
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
