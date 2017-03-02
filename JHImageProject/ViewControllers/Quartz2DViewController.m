@@ -34,7 +34,44 @@
 //    [self.view addSubview:qqqq];
     
     //////////////////////////////
-    [self showShapeLayer];
+    [self showShapelayer2];
+    
+}
+
+- (void)gcdDemo {
+    _testLock = [[TestLock alloc] init];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        [_testLock method1];
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(1);
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        [_testLock method2];
+        dispatch_semaphore_signal(semaphore);
+    });
+}
+
+-(void)showShapelayer2{
+    self.shapeLayer =[CAShapeLayer layer];
+    self.shapeLayer.frame = CGRectMake(0, 150, 200, 200);
+    self.shapeLayer.position=self.view.center;
+    self.shapeLayer.fillColor = [UIColor cyanColor].CGColor;//填充颜色为ClearColor
+    self.shapeLayer.lineWidth = 1.0f;
+    self.shapeLayer.strokeColor = UIColorFromRGB(0xFF5001).CGColor;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(100, 100) radius:40 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+    self.shapeLayer.path=path.CGPath;
+    self.shapeLayer.strokeStart=0;
+    self.shapeLayer.strokeEnd=0;
+
+//    self.shapeLayer.strokeEnd=0.75;
+
+    
+    [self.view.layer addSublayer:self.shapeLayer];
     
 }
 -(void)showShapeLayer{
@@ -61,7 +98,10 @@
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO,0.0);
+      self.shapeLayer.strokeEnd=1;
+    self.shapeLayer.speed=0.1;
+    
+ //    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO,0.0);
     
 //    //获取当前的上下文
 //    CGContextRef ctx = UIGraphicsGetCurrentContext();

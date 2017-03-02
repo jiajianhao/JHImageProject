@@ -72,15 +72,26 @@
 //}
 
 //画弧
- - (void)drawRect:(CGRect)rect {
-    CGFloat radius = rect.size.width / 2;
-    CGFloat lineWidth = 10.0;
-    UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(radius, radius) radius:radius - lineWidth / 2 startAngle:0.f endAngle:M_PI*2*0.2 clockwise:YES];
-    [[UIColor colorWithRed:0.5 green:0.5 blue:0.9 alpha:1.0] setStroke];
-    [path setLineWidth:lineWidth];
-    [path stroke];
+// - (void)drawRect:(CGRect)rect {
+//    CGFloat radius = rect.size.width / 2;
+//    CGFloat lineWidth = 10.0;
+//    UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(radius, radius) radius:radius - lineWidth / 2 startAngle:0.f endAngle:M_PI*2*0.2 clockwise:YES];
+//    [[UIColor colorWithRed:0.5 green:0.5 blue:0.9 alpha:1.0] setStroke];
+//    [path setLineWidth:lineWidth];
+//    [path stroke];
+//}
+- (void)drawRect:(CGRect)rect
+{
+    UIColor *color = [UIColor redColor];
+    [color set]; //设置线条颜色
+    UIBezierPath* aPath = [UIBezierPath bezierPath];
+    aPath.lineWidth = 5.0;
+    aPath.lineCapStyle = kCGLineCapRound; //线条拐角
+    aPath.lineJoinStyle = kCGLineCapRound; //终点处理
+    [aPath moveToPoint:CGPointMake(20, 50)];
+    [aPath addCurveToPoint:CGPointMake(200, 50) controlPoint1:CGPointMake(110, 0) controlPoint2:CGPointMake(110, 100)];
+    [aPath stroke];
 }
-
 
 -(void)layoutSubviews{
     NSLog(@"layoutSubviews");
